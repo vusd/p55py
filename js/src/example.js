@@ -8,19 +8,19 @@ var _ = require('underscore');
 //
 // When serialiazing entire widget state for embedding, only values different from the
 // defaults will be specified.
-var HelloModel = widgets.DOMWidgetModel.extend({
+var P55CanvasModel = widgets.DOMWidgetModel.extend({
     defaults: _.extend({}, widgets.DOMWidgetModel.prototype.defaults, {
-        _model_name : 'HelloModel',
-        _view_name : 'HelloView',
+        _model_name : 'P55CanvasModel',
+        _view_name : 'P55CanvasView',
         _model_module : 'p55py',
         _view_module : 'p55py',
-        value : 'Hello World'
+        value : 'Hello P55'
     })
 });
 
 
 // Custom View. Renders the widget model.
-var HelloView = widgets.DOMWidgetView.extend({
+var P55CanvasView = widgets.DOMWidgetView.extend({
     render: function() {
         this.value_changed();
         this.model.on('change:value', this.value_changed, this);
@@ -33,6 +33,6 @@ var HelloView = widgets.DOMWidgetView.extend({
 
 
 module.exports = {
-    HelloModel : HelloModel,
-    HelloView : HelloView
+    P55CanvasModel : P55CanvasModel,
+    P55CanvasView : P55CanvasView
 };
