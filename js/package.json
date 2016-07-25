@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dribnet/p55py.git"
+    "url": "https://github.com/vusd/p55py.git"
   },
   "keywords": [
     "jupyter",

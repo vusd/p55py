@@ -1,5 +1,6 @@
 p55py
 ===============================
+HIGHLY EXPERIMENTAL. TRUST NO ONE.
 
 Experimental Jupyter Widget for Creative Coding
 
@@ -14,7 +15,7 @@ To install use pip:
 
 For a development installation (requires npm),
 
-    $ git clone https://github.com/dribnet/p55py.git
+    $ git clone https://github.com/vusd/p55py.git
     $ cd p55py
     $ pip install -e .
     $ jupyter nbextension install --py --symlink --user p55py
