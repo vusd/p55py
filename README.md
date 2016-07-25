@@ -1,6 +1,6 @@
 p55py
 ===============================
-HIGHLY EXPERIMENTAL. TRUST NO ONE.
+PROOF OF CONCEPT. HIGHLY EXPERIMENTAL. TRUST NO ONE.
 
 Experimental Jupyter Widget for Creative Coding
 
