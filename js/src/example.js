@@ -50,12 +50,23 @@ var P55CanvasView = widgets.DOMWidgetView.extend({
         this.$canvas[0].addEventListener('mousemove', track_mouse_pos, false);
         this.$canvas[0].addEventListener('mousedown', callback_on_mouse_down, false);
         this.$canvas[0].addEventListener('mouseup', callback_on_mouse_up, false);
+
+        var image_file = "snapshot.png"
+        var image_str = '<img src="' + image_file + '" width="' + canvas_width + '" height="' + canvas_height + '"></canvas>'
+        this.$image = $(image_str);
+        this.$el.append(this.$image);
     },
 
     value_changed: function() {
         // anytime the value is changed we do a full sync
         var canvas_width = this.model.get('canvas_width');
         var canvas_height = this.model.get('canvas_height');
+        if (typeof this.$image != "undefined") {
+            // console.log(this.$image.width);
+            this.$image[0].width = canvas_width
+            this.$image[0].height = canvas_height
+            this.$image[0].src = this.model.get('image_src');
+        }
         this.$canvas[0].width = canvas_width
         this.$canvas[0].height = canvas_height
         var ctx = this.$canvas[0].getContext("2d");
