@@ -6,7 +6,7 @@ install_requires = [
 ]
 
 setup(name='p55py',
-      version='0.2.0',
+      version='0.2.1.dev',
       description='Experimental python based Creative Coding library',
       author='Tom White',
       author_email='tom@sixdozen.com',
